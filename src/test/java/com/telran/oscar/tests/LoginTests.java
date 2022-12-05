@@ -17,8 +17,8 @@ public class LoginTests extends TestBase{
     }
 
     @Test
-    public void loginWithValidDataTest() {
-        new LoginPage(driver).fillLoginFormWithValidData();
+    public void loginTest() {
+        new LoginPage(driver).fillLoginWithValidData();
 //        Assert.assertTrue(new RegisterPage(driver).isRegisterDisplayed());
         Assert.assertTrue(new LoginPage(driver).isLoginDisplayed());
     }

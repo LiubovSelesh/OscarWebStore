@@ -12,7 +12,7 @@ public class ProfileTests extends TestBase{
     @BeforeMethod
     public void ensurePrecondition() {
         new HomePage(driver).clickOnLoginAndRegisterLink();
-        new LoginPage(driver).fillLoginFormWithValidData();
+        new LoginPage(driver).fillLoginWithValidData();
     }
 
     @Test

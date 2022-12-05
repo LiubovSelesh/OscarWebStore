@@ -26,7 +26,7 @@ public class ProfilePage extends PageBase {
 
 
     public ProfilePage fillTheFieldPassword() {
-        type(passwordField, "Borno1985#");
+        type(passwordField, "Borno1985$");
         click(deleteButton);
         return this;
     }

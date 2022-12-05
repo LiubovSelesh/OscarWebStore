@@ -18,9 +18,9 @@ public class LoginPage extends PageBase {
     @FindBy(xpath = "//button[contains(text(),'Log In')]")
     WebElement buttonLogIn;
 
-    public LoginPage fillLoginFormWithValidData() {
+    public LoginPage fillLoginWithValidData() {
         type(loginUsername,"bornTina@gmail.com");
-        type(loginPassword, "Borno1985#");
+        type(loginPassword, "Borno1985$");
         click(buttonLogIn);
         return this;
     }

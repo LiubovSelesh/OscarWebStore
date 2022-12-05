@@ -26,8 +26,8 @@ public class RegisterPage extends PageBase {
 
     public RegisterPage registrationUserWithValidData() {
         type(emailField, "bornTina@gmail.com");
-        type(passwordField, "Borno1985#");
-        type(confirmPasswordField, "Borno1985#");
+        type(passwordField, "Borno1985$");
+        type(confirmPasswordField, "Borno1985$");
         click(registrationSubmit);
         return this;
     }
