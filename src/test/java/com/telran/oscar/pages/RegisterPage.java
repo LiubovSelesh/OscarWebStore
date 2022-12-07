@@ -10,8 +10,6 @@ public class RegisterPage extends PageBase {
         super(driver);
     }
 
-
-
     @FindBy(id = "id_registration-email")
     WebElement emailField;
 
@@ -25,13 +23,12 @@ public class RegisterPage extends PageBase {
     WebElement registrationSubmit;
 
     public RegisterPage registrationUserWithValidData() {
-        type(emailField, "bornTina@gmail.com");
+        type(emailField, "bornTina24@gmail.com");
         type(passwordField, "Borno1985$");
         type(confirmPasswordField, "Borno1985$");
         click(registrationSubmit);
         return this;
     }
-
 
     public RegisterPage fillRegisterFormWithValidData() {
         int i = (int) ((System.currentTimeMillis()) / 1000) % 3600;
@@ -42,7 +39,7 @@ public class RegisterPage extends PageBase {
         return this;
     }
 
-    public RegisterPage fillRegisterFormIWithAllValidData(String email, String password, String confirm) {
+    public RegisterPage fillRegisterFormWithAllValidData(String email, String password, String confirm) {
         type(emailField, email );
         type(passwordField, password);
         type(confirmPasswordField, confirm);

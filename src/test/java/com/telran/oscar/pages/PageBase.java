@@ -5,6 +5,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,6 +33,12 @@ public class PageBase {
             element.clear();
             element.sendKeys(text);
         }
+    }
+
+    public void clickWithAction(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        element.click();
     }
 
     public void shouldHaveText(WebElement element, String text, int time) {
@@ -60,4 +68,10 @@ public class PageBase {
         new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
     }
 
+    @FindBy(xpath = "//*[contains(text(),' Account')]")
+    WebElement logoAccount;
+
+    public boolean isAccountDisplayed() {
+        return logoAccount.isDisplayed();
+    }
 }

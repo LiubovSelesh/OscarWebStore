@@ -19,7 +19,7 @@ public class LoginPage extends PageBase {
     WebElement buttonLogIn;
 
     public LoginPage fillLoginWithValidData() {
-        type(loginUsername,"bornTina@gmail.com");
+        type(loginUsername,"bornTina24@gmail.com");
         type(loginPassword, "Borno1985$");
         click(buttonLogIn);
         return this;

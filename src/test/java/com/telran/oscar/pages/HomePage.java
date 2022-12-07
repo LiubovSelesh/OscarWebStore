@@ -17,6 +17,16 @@ public class HomePage extends PageBase {
         click(loginLink);
         return new RegisterPage(driver);
     }
+
+    @FindBy(xpath = "//a[contains(text(),'All products')]")
+    WebElement allProducts;
+
+
+
+    public ProductPage selectCategory() {
+        click(allProducts);
+        return new ProductPage(driver);
+    }
 }
 
 

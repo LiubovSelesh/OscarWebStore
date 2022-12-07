@@ -19,28 +19,27 @@ public class LoginTests extends TestBase{
     @Test
     public void loginTest() {
         new LoginPage(driver).fillLoginWithValidData();
-//        Assert.assertTrue(new RegisterPage(driver).isRegisterDisplayed());
-        Assert.assertTrue(new LoginPage(driver).isLoginDisplayed());
+        Assert.assertTrue(new RegisterPage(driver).isRegisterDisplayed());
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithValidData")
-    public void loginWithValidDataTest(String email, String password) {
+    public void loginWithValidDataPositiveTest(String email, String password) {
         new LoginPage(driver).fillLoginFormWithValidData(email, password);
         Assert.assertTrue(new RegisterPage(driver).isRegisterDisplayed());
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithInvalidEmail")
-    public void loginWithInvalidEmailTest(String email) {
+    public void loginWithInvalidEmailNegativeTest(String email) {
         new LoginPage(driver).fillLoginFormInvalidData(email, "Borno1985$");
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithInvalidPassword")
-    public void loginWithInvalidPasswordTest(String password) {
+    public void loginWithInvalidPasswordNegativeTest(String password) {
         new LoginPage(driver).fillLoginFormInvalidData("bornTina@gmail.com", password);
     }
 
     @Test
-    public void loginDeleteTest(String password) {
+    public void loginDeleteTest() {
         new LoginPage(driver).fillLoginFormInvalidData("bornTina@gmail.com", "Borno1985#");
     }
 }
