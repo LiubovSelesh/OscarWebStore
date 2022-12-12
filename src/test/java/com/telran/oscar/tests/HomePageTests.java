@@ -1,5 +1,6 @@
 package com.telran.oscar.tests;
 
+import com.telran.oscar.data.UserData;
 import com.telran.oscar.pages.HomePage;
 import com.telran.oscar.pages.ProductPage;
 import com.telran.oscar.pages.RegisterPage;
@@ -13,7 +14,7 @@ public class HomePageTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         new HomePage(driver).clickOnLoginAndRegisterLink();
-        new RegisterPage(driver).fillRegisterFormWithValidData();
+        new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
 
     }
     //smoky
@@ -27,5 +28,7 @@ public class HomePageTests extends TestBase {
         new HomePage(driver).selectCategory();
         Assert.assertTrue(new ProductPage(driver).isProductPage().contains("All products"));
     }
+
+
 
 }

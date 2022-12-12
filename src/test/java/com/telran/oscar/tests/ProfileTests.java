@@ -14,13 +14,13 @@ public class ProfileTests extends TestBase{
         new HomePage(driver).clickOnLoginAndRegisterLink();
         new LoginPage(driver).fillLoginWithValidData();
     }
-
-    @Test
-    public void deleteProfileTest() {
-        new RegisterPage(driver).clickOnAccount();
-        new ProfilePage(driver).clickOnDeleteProfile();
-        new ProfilePage(driver).fillTheFieldPassword();
-
-    }
+//
+//    @Test
+//    public void deleteProfileTest() {
+//        new RegisterPage(driver).clickOnAccount();
+//        new ProfilePage(driver).clickOnDeleteProfile();
+//        new ProfilePage(driver).fillTheFieldPassword();
+//
+//    }
 }
 

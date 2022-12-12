@@ -1,5 +1,6 @@
 package com.telran.oscar.pages;
 
+import com.telran.oscar.data.UserData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,10 +27,12 @@ public class ProfilePage extends PageBase {
 
 
     public ProfilePage fillTheFieldPassword() {
-        type(passwordField, "Borno1985$");
+        type(passwordField, UserData.USER_REG_PASSWORD);
         click(deleteButton);
         return this;
     }
+
+
 }
 
 //#

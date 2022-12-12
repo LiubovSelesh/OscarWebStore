@@ -68,7 +68,7 @@ public class PageBase {
         new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
     }
 
-    @FindBy(xpath = "//*[contains(text(),' Account')]")
+    @FindBy(css = ".nav-link.mt-2.mt-lg-0")
     WebElement logoAccount;
 
     public boolean isAccountDisplayed() {

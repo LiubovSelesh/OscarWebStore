@@ -30,11 +30,11 @@ public class RegisterPage extends PageBase {
         return this;
     }
 
-    public RegisterPage fillRegisterFormWithValidData() {
+    public RegisterPage fillRegisterFormWithValidData(String password, String confirm) {
         int i = (int) ((System.currentTimeMillis()) / 1000) % 3600;
         type(emailField, "bornTina" + i + "@gmail.com");
-        type(passwordField, "BPRno1456$");
-        type(confirmPasswordField, "BPRno1456$");
+        type(passwordField, password);
+        type(confirmPasswordField, confirm);
         click(registrationSubmit);
         return this;
     }
@@ -44,6 +44,7 @@ public class RegisterPage extends PageBase {
         type(passwordField, password);
         type(confirmPasswordField, confirm);
         click(registrationSubmit);
+        clickOnAccount();
         return this;
     }
 
@@ -62,10 +63,18 @@ public class RegisterPage extends PageBase {
         return this;
     }
 
-    @FindBy(xpath = "//h2[contains(text(),'Welcome!')]")
+//    @FindBy(xpath = "//h2[contains(text(),'Welcome!')]")
+    @FindBy(xpath = "//h1[contains(text(),'All products')]")
     WebElement welcome;
 
     public boolean isRegisterDisplayed() {
+        return welcome.isDisplayed();
+    }
+
+    @FindBy(id = "login_link")
+    WebElement loginAndRegister;
+
+    public boolean isLoginAndRegisterDisplayed() {
         return welcome.isDisplayed();
     }
 
@@ -77,7 +86,8 @@ public class RegisterPage extends PageBase {
 
     }
 
-    @FindBy(css = ".icon-user")
+//    @FindBy(css = ".icon-user")
+    @FindBy(css = ".nav-link.mt-2")
     WebElement iconUser;
 
     public ProfilePage clickOnAccount() {

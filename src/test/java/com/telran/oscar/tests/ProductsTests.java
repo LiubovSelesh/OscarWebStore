@@ -1,5 +1,6 @@
 package com.telran.oscar.tests;
 
+import com.telran.oscar.data.UserData;
 import com.telran.oscar.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,7 +12,7 @@ public class ProductsTests extends TestBase{
     public void ensurePrecondition() {
         new HomePage(driver).clickOnLoginAndRegisterLink();
 //        new LoginPage(driver).fillLoginWithValidData();
-        new RegisterPage(driver).fillRegisterFormWithValidData();
+        new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
         new HomePage(driver).selectCategory();
     }
 //smoky
