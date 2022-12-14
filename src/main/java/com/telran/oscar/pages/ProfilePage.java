@@ -35,6 +35,3 @@ public class ProfilePage extends PageBase {
 
 }
 
-//#
-//#id_password
-//  [data-loading-text='Deleting...']

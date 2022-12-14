@@ -4,9 +4,9 @@
     <test name="SmokyTestsVer2" >
         <classes>
             <class name="com.telran.oscarVersion2.tests.RegisterTests">
-                <methods>
-                    <exclude name=".*Negative.*"></exclude>
-                </methods>
+<!--                <methods>-->
+<!--                    <exclude name=".*Negative.*"></exclude>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

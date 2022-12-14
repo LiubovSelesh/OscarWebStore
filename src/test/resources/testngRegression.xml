@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokyTestsVer2" verbose="1" >
+    <test name="SmokyTestsVer2" >
+        <classes>
+            <class name="com.telran.oscarVersion2.tests.HomePageUITests"></class>
+            <class name="com.telran.oscarVersion2.tests.ProductsTests"></class>
+        </classes>
+    </test>
+</suite>

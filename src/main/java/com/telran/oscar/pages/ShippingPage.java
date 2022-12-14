@@ -3,6 +3,7 @@ package com.telran.oscar.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class ShippingPage extends BasketPage {
     public ShippingPage(WebDriver driver) {
@@ -54,7 +55,9 @@ public class ShippingPage extends BasketPage {
         click(continuePaymentBtn);
         click(placeOrderBtn);
         click(logo);
-
         return this;
     }
+
+
+
 }

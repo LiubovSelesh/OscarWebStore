@@ -25,6 +25,14 @@ public class BasketPage extends PageBase {
         click(proceedToCheck);
         return new ShippingPage(driver);
     }
+
+    @FindBy(css = ".btn.btn-primary.btn-sm")
+    WebElement checkOutBtn;
+
+    public BasketPage checkoutBasket() {
+        click(checkOutBtn);
+        return new ShippingPage(driver);
+    }
 }
 
 

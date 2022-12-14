@@ -48,6 +48,13 @@ public class LoginPage extends PageBase {
         return this;
     }
 
+    @FindBy(id = "logout_link")
+    WebElement logOut;
+
+    public LoginPage clickOnLogout() {
+        click(logOut);
+        return this;
+    }
 }
 
 

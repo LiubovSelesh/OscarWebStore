@@ -6,12 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static java.awt.SystemColor.text;
+
 public class ProductsTests extends TestBase{
 
     @BeforeMethod
     public void ensurePrecondition() {
         new HomePage(driver).clickOnLoginAndRegisterLink();
-//        new LoginPage(driver).fillLoginWithValidData();
         new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
         new HomePage(driver).selectCategory();
     }
