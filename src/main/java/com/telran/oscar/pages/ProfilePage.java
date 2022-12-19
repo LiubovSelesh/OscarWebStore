@@ -32,6 +32,12 @@ public class ProfilePage extends PageBase {
         return this;
     }
 
+    public ProfilePage fillTheFieldPasswordForDeleteProfile(String password) {
+        type(passwordField, password);
+        click(deleteButton);
+        return this;
+    }
+
 
 }
 

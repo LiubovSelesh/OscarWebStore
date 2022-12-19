@@ -1,11 +1,8 @@
 package com.telran.oscar.pages;
 
-import com.telran.oscar.data.UserData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.Collection;
 
 public class ProductPage extends PageBase{
     public ProductPage(WebDriver driver) {
@@ -25,7 +22,8 @@ public class ProductPage extends PageBase{
     @FindBy(css = "[value='Add to basket']")
     WebElement addToBasketBtn;
 
-    @FindBy(css = "#messages .btn.btn-info:nth-child(1)")
+//    @FindBy(css = "#messages .btn.btn-info:nth-child(1)")
+    @FindBy(css = "#messages > div:nth-child(3) .btn:nth-of-type(1)")
     WebElement viewBasketButton;
 
     public ProductPage clickOnBook() {
@@ -85,10 +83,6 @@ public class ProductPage extends PageBase{
         click(scoreWithStars);
         click(bodyField);
         bodyField.sendKeys("I really like this book");
-//        click(nameField);
-//        nameField.sendKeys("Tina");
-//        click(emailField);
-//        emailField.sendKeys("bornTina58@gmail.com");
         click(btnSaveReview);
         return this;
     }
@@ -121,8 +115,6 @@ public class ProductPage extends PageBase{
     }
 
 
-
-
     @FindBy(css = ".row.list-unstyled li:nth-child(3) img")
     WebElement thirdImgOfBook;
 
@@ -135,6 +127,9 @@ public class ProductPage extends PageBase{
     @FindBy(css = ".dropdown-menu.dropdown-menu-right.show")
     WebElement dropDownMenu;
 
+    @FindBy(xpath = "//button[contains(text(),'View basket')]")
+    WebElement btnViewBasket;
+
 
     public ProductPage addBookToBasket() {
         click(bookLink);
@@ -144,18 +139,93 @@ public class ProductPage extends PageBase{
         return null;
     }
 
+    public ProductPage addProductToBasket() {
+        click(bookLink);
+        click(button1AddToBasket);
+        click(button5AddToBasket);
+        click(btnViewBasket);
+        return null;
+    }
+
     public boolean takeDropDownMenuDisplayed() {
         return dropDownMenu.isDisplayed();
     }
 
+    @FindBy(css = ".col-sm-6.product_main .price_color")
+    WebElement priceOfBookOnPage;
 
+    @FindBy(css = ".dropdown-menu li:nth-child(1) .price_color")
+    WebElement priceOfBookOnDropDownMenu;
+
+    @FindBy(css = ".dropdown-menu li.form-group .text-right")
+    WebElement priceOfBookOnDropDownMenuTotal;
+
+
+    public boolean priceComparison() {
+        String generalPrice = priceOfBookOnPage.getText();
+        String priceOnDropMenu = priceOfBookOnDropDownMenu.getText();
+        String priceOnDropMenuTotal = priceOfBookOnDropDownMenuTotal.getText().replace("Total: ", "");
+
+        if (generalPrice.equals(priceOnDropMenu) && priceOnDropMenu.equals(priceOnDropMenuTotal)) {
+            System.out.println("true");
+            return true;
+        } else {
+            System.out.println("false");
+            return false;
+        }
+    }
+
+    @FindBy(css = ".ml-0 li:nth-child(1) .btn")
+    WebElement button1AddToBasket;
+
+    @FindBy(css = ".ml-0 li:nth-child(5) .btn")
+    WebElement button5AddToBasket;
+
+    @FindBy(css = "section .col-sm-6:nth-child(1) .price_color")
+    WebElement priceProduct1;
+
+    @FindBy(css = "section .col-sm-6:nth-child(5) .price_color")
+    WebElement priceProduct5;
+
+
+    @FindBy(css = "#messages div:nth-child(3) strong")
+    WebElement totalBasket;
+
+
+    public ProductPage checkSumProductsToBasket() {
+        click(button1AddToBasket);
+        click(button5AddToBasket);
+        checkSumAddedProducts();
+
+        return this;
+    }
+
+    public ProductPage checkSumAddedProducts() {
+        String price1 = priceProduct1.getText().replaceAll("[^\\d.]", "");
+        String price5 = priceProduct5.getText().replaceAll("[^\\d.]", "");
+        double priceNum1 = Double.parseDouble(price1);
+        double priceNum5 = Double.parseDouble(price5);
+        double totalSum = priceNum1  + priceNum5;
+
+        String basketTotal = totalBasket.getText().replaceAll("[^\\d.]", "");
+
+        double priceTotalBasket = Double.parseDouble(basketTotal);
+
+        if (priceTotalBasket == totalSum  ) {
+            System.out.println("true");
+
+        } else {
+            System.out.println("false");
+        }
+        return this;
+    }
 }
 
 
 
 
 
-
+// .ml-0 li:nth-child(5) .btn
 
 
 //    @FindBy(xpath = "//li[3] //button[contains(text(),'Add to basket')]")

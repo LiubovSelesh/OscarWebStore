@@ -29,7 +29,6 @@ public class ProductsTests extends TestBase{
         new ProductPage(driver).clickOnBtnAddToBasket();
         new BasketPage(driver).clickOnProceedToCheckOut();
         new ShippingPage(driver).fillFormForShipping();
-        Assert.assertTrue(new BasketPage(driver).isAccountDisplayed());
-
+        Assert.assertTrue(new BasketPage(driver).takeNumberOfOrder().contains("confirmation"));
     }
 }

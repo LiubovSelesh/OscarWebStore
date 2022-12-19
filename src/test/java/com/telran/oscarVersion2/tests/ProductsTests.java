@@ -9,13 +9,7 @@ import org.testng.annotations.Test;
 public class ProductsTests extends TestBase{
 
 
-    @BeforeMethod
-    public void ensurePrecondition() {
-
-
-    }
-
-    @Test
+       @Test
     public void writeReviewToBookWithRegistrationUserTest() {
         new HomePage(driver).clickOnLoginAndRegisterLink();
         new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
@@ -49,7 +43,33 @@ public class ProductsTests extends TestBase{
         new ProfilePage(driver).clickOnDeleteProfile();
         new ProfilePage(driver).fillTheFieldPassword();
         Assert.assertTrue(new ProductPage(driver).isProductPage().contains("All products"));
-;
     }
+
+    @Test
+    public void comparePriceOnProduct() {
+        new HomePage(driver).clickOnLoginAndRegisterLink();
+        new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
+        new ProductPage(driver).addBookToBasket();
+        new ProductPage(driver).priceComparison();
+    }
+
+
+    @Test
+    public void checkSumOnProduct() {
+        new HomePage(driver).clickOnLoginAndRegisterLink();
+        new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
+        new ProductPage(driver).checkSumProductsToBasket();
+    }
+
+    @Test
+    public void chooseBookForLoginUserPushButton(){
+        new HomePage(driver).clickOnLoginAndRegisterLink();
+        new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
+        new ProductPage(driver).clickOnBtnAddToBasket();
+        new BasketPage(driver).clickOnProceedToCheckOut();
+        new ShippingPage(driver).fillFormForShipping();
+        Assert.assertTrue(new BasketPage(driver).takeNumberOfOrder().contains("confirmation"));
+    }
+
 }
 

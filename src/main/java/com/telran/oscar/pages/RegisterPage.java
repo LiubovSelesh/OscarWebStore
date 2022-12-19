@@ -78,10 +78,11 @@ public class RegisterPage extends PageBase {
         return welcome.isDisplayed();
     }
 
-    @FindBy(css = ".error-block")
+//    @FindBy(css = ".error-block")
+    @FindBy(xpath = "//strong[contains(text(),'Oops! We found some errors')]")
     WebElement errorBlock;
 
-    public String getConfirmResult() {
+    public String getMessagemResult() {
         return errorBlock.getText();
 
     }

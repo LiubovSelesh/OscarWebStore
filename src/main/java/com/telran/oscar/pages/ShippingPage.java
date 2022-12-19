@@ -3,9 +3,17 @@ package com.telran.oscar.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
-public class ShippingPage extends BasketPage {
+
+public class ShippingPage extends PageBase {
+
+
+    private int orderNumber;
+
+    public int getOrderNumber() {
+        return this.orderNumber;
+    }
+
     public ShippingPage(WebDriver driver) {
         super(driver);
     }
@@ -43,6 +51,9 @@ public class ShippingPage extends BasketPage {
     @FindBy(xpath = "//a[contains(text(),'Oscar')]")
     WebElement logo;
 
+    @FindBy(css = ".page_inner .sub-header h1")
+    WebElement confirmationOrder ;
+
     public ShippingPage fillFormForShipping() {
         type(firstName, "Tina");
         type(lastName, "Born");
@@ -54,10 +65,15 @@ public class ShippingPage extends BasketPage {
         click(continueBtn);
         click(continuePaymentBtn);
         click(placeOrderBtn);
-        click(logo);
+        confirmationOrder.isDisplayed();
+        String conNum = confirmationOrder.getText().replaceAll("[^\\d.]", "");
+        orderNumber = Integer.parseInt(conNum);
+        System.out.println("orderNumber " + orderNumber);
+//        System.out.println("getOrderNumber " + getOrderNumber());
         return this;
     }
 
 
 
+//
 }

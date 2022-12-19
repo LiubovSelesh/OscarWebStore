@@ -5,7 +5,7 @@
         <classes>
             <class name="com.telran.oscarVersion2.tests.RegisterTests">
 <!--                <methods>-->
-<!--                    <exclude name=".*Negative.*"></exclude>-->
+<!--                    <exclude name=".*Invalid.*"></exclude>-->
 <!--                </methods>-->
             </class>
         </classes>
