@@ -10,7 +10,6 @@ public class HomePageUITests extends TestBase {
     @Test
     public void elementDropDownWithLanguagePresent() {
         Assert.assertTrue(new HomePage(driver).isLanguageDisplayed());
-
     }
 
     @Test
@@ -65,7 +64,14 @@ public class HomePageUITests extends TestBase {
         Assert.assertTrue(new HomePage(driver).isAddToBasketDisplayed());
     }
 
-    @AfterMethod
+    @Test
+    public void checkLinks() {
+//        new HomePage(driver).checkAllLinks(); //.checkBrokenLinks();
+        new HomePage(driver).checkAllLinks().checkBrokenLinks();
+    }
+
+
+    @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
     }

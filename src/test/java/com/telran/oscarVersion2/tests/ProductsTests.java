@@ -71,5 +71,6 @@ public class ProductsTests extends TestBase{
         Assert.assertTrue(new BasketPage(driver).takeNumberOfOrder().contains("confirmation"));
     }
 
+
 }
 

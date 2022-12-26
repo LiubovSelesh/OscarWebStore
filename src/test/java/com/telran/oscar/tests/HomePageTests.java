@@ -17,7 +17,7 @@ public class HomePageTests extends TestBase {
         new RegisterPage(driver).fillRegisterFormWithValidData(UserData.USER_REG_PASSWORD, UserData.USER_REG_PASSWORD);
 
     }
-    //smoky
+//smoky
     @Test
     public void openHomePage() {
         System.out.println("Opened home page");
@@ -28,7 +28,6 @@ public class HomePageTests extends TestBase {
         new HomePage(driver).selectCategory();
         Assert.assertTrue(new ProductPage(driver).isProductPage().contains("All products"));
     }
-
 
 
 }

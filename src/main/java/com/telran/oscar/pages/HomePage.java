@@ -1,10 +1,17 @@
 package com.telran.oscar.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends PageBase {
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+
+public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -67,12 +74,13 @@ public class HomePage extends PageBase {
         return logoBasketTotal.isDisplayed();
     }
 
-    @FindBy(xpath = "//button[contains(text(),'View basket')]")
-    WebElement btnViewBasket;
+//    @FindBy(xpath = "//button[contains(text(),'View basket')]")
+    @FindBy(css = ".btn-group .btn.btn-outline-secondary:nth-child(1)")
+    WebElement viewBasketBtn;
 
     public boolean isBtnViewBasketDisplayed() {
-        System.out.println("Button view basket total is present: " + btnViewBasket.getText());
-        return btnViewBasket.isDisplayed();
+        System.out.println("Button view basket total is present: " + viewBasketBtn.getText());
+        return viewBasketBtn.isDisplayed();
     }
 
     @FindBy(css = ".nav.nav-list.flex-column")
@@ -141,5 +149,58 @@ public class HomePage extends PageBase {
         return firstBtnAddToBasket.isDisplayed() && sixBtnAddToBasket.isDisplayed() && twentyBtnAddToBasket.isDisplayed();
     }
 
+    public HomePage addItemToBasket(int number) {
+        driver.findElement(By.cssSelector(".col-sm-6:nth-child(" +  number + ") .btn")).click();
+        return this;
+    }
+
+    public BasketPage clickOnViewBasketButton() {
+        click(viewBasketBtn);
+        return new BasketPage(driver);
+    }
+
+    @FindBy(tagName = "a")
+    List<WebElement> links;
+
+    public HomePage checkAllLinks() {
+        System.out.println("Total links on the WebPage: " + links.size());
+        String url = "";
+        Iterator<WebElement> iterator = links.iterator();
+        while (iterator.hasNext()) {
+            url = iterator.next().getText();
+            System.out.println("url " + url);
+        }
+        return this;
+    }
+
+    @FindBy(tagName = "a")
+    List<WebElement> brokenLinks;
+    public HomePage checkBrokenLinks() {
+            for (int i = 0; i < brokenLinks.size(); i++) {
+                WebElement element = brokenLinks.get(i);
+                String url = element.getAttribute("href");
+                verifyLinks(url);
+            }
+            return this;
+        }
+
+    public void verifyLinks(String urlLink) {
+        URL url = null;
+        try {
+            url = new URL(urlLink);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+//            httpURLConnection.setConnectTimeout(2000);
+            httpURLConnection.connect();
+            if(httpURLConnection.getResponseCode() >= 400) {
+                System.out.println(urlLink + " - " + httpURLConnection.getResponseMessage() + "is broken link");
+            } else {
+                System.out.println(urlLink + " - " + httpURLConnection.getResponseMessage());
+            }
+        } catch (Exception e) {
+            System.out.println(urlLink + " - " + e.getMessage() + "is broken link");
+        }
+    }
 }
+
+
 

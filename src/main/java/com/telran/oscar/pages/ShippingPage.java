@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class ShippingPage extends PageBase {
+public class ShippingPage extends BasePage {
 
 
     private int orderNumber;
@@ -48,6 +48,9 @@ public class ShippingPage extends PageBase {
     @FindBy(id = "place-order")
     WebElement placeOrderBtn;
 
+    @FindBy(css = ".offset-sm-4 .btn ")
+    WebElement continueShopping;
+
     @FindBy(xpath = "//a[contains(text(),'Oscar')]")
     WebElement logo;
 
@@ -65,15 +68,13 @@ public class ShippingPage extends PageBase {
         click(continueBtn);
         click(continuePaymentBtn);
         click(placeOrderBtn);
-        confirmationOrder.isDisplayed();
-        String conNum = confirmationOrder.getText().replaceAll("[^\\d.]", "");
-        orderNumber = Integer.parseInt(conNum);
-        System.out.println("orderNumber " + orderNumber);
+        click(continueShopping);
+
+//        confirmationOrder.isDisplayed();
+//        String conNum = confirmationOrder.getText().replaceAll("[^\\d.]", "");
+//        orderNumber = Integer.parseInt(conNum);
+//        System.out.println("orderNumber " + orderNumber);
 //        System.out.println("getOrderNumber " + getOrderNumber());
         return this;
     }
-
-
-
-//
 }

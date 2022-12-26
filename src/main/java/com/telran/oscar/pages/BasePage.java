@@ -13,12 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
-public class PageBase {
+public class BasePage {
 
-    protected WebDriver driver;
+    public WebDriver driver;
 
-    public PageBase(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -64,6 +65,11 @@ public class PageBase {
         }
 
     }
+
+    public boolean isElementPresent(List<WebElement> element) {
+        return element.size() > 0;
+    }
+
     public void should(WebElement element, int time) {
         new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
     }
@@ -74,4 +80,6 @@ public class PageBase {
     public boolean isAccountDisplayed() {
         return logoAccount.isDisplayed();
     }
+
+
 }
