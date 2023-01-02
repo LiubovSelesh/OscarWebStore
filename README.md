@@ -18,7 +18,7 @@ Pattern was created with Page Object
   • Regression Testing
 Use boundary value with csv file use DataProvider
 Creating Package for running tests:
-  • UI test- testngUI.xml 
-  • SmokeTest - testngSmoky.xml
-  • RegressionTest - testRegression.xml
+  • UI test- testngUI.xml  - gradlew clean testngUI
+  • SmokeTest - testngSmoky.xml  - gradlew clean testSmoky
+  • RegressionTest - testRegression.xml - gradlew clean testngRegression
 - used the Headless method to speed up the testing process
