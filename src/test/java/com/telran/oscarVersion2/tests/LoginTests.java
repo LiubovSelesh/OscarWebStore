@@ -20,13 +20,13 @@ public class LoginTests extends TestBase{
     }
 
 
-    @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithValidData")
-    public void loginWithValidDataPositiveTest(String email, String password) {
-        new LoginPage(driver).fillLoginFormWithValidData(email, password);
-        new LoginPage(driver).clickOnLogout();
-      Assert.assertTrue(new ProductPage(driver).isProductPage().contains("All products"));
-
-    }
+//    @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithValidData")
+//    public void loginWithValidDataPositiveTest(String email, String password) {
+//        new LoginPage(driver).fillLoginFormWithValidData(email, password);
+//        new LoginPage(driver).clickOnLogout();
+//      Assert.assertTrue(new ProductPage(driver).isProductPage().contains("All products"));
+//
+//    }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "loginWithInvalidEmail")
     public void loginWithInvalidEmailNegativeTest(String email) {

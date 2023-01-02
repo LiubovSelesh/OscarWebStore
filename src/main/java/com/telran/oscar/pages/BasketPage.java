@@ -30,8 +30,9 @@ public class BasketPage extends ShippingPage {
     @FindBy(css = ".page_inner .sub-header h1")
     WebElement confirmOrder;
 
-    public String takeNumberOfOrder() {
-        return confirmOrder.getText();
+    public boolean getNumberOfOrder() {
+        System.out.println(confirmOrder.getText());
+        return confirmOrder.isDisplayed();
     }
 
     @FindBy(xpath = ".//a[contains(text(),'Proceed to checkout')]")

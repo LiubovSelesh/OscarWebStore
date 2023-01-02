@@ -71,7 +71,8 @@ public class HomePageUITests extends TestBase {
     }
 
 
-    @AfterMethod(enabled = false)
+//    @AfterMethod(enabled = false)
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }

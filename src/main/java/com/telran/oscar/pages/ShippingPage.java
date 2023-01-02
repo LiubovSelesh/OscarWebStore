@@ -39,7 +39,7 @@ public class ShippingPage extends BasePage {
     @FindBy(xpath = " //option[contains(text(),'Germany')]")
     WebElement countryName;
 
-    @FindBy(xpath = "//button[contains(text(),'Continue')]")
+    @FindBy(css = ".btn.btn-lg.btn-primary")
     WebElement continueBtn;
 
     @FindBy(id = "view_preview")
@@ -50,12 +50,12 @@ public class ShippingPage extends BasePage {
 
     @FindBy(css = ".offset-sm-4 .btn ")
     WebElement continueShopping;
-
-    @FindBy(xpath = "//a[contains(text(),'Oscar')]")
-    WebElement logo;
-
-    @FindBy(css = ".page_inner .sub-header h1")
-    WebElement confirmationOrder ;
+//
+//    @FindBy(xpath = "//a[contains(text(),'Oscar')]")
+//    WebElement logo;
+//
+//    @FindBy(css = ".page_inner .sub-header h1")
+//    WebElement confirmationOrder ;
 
     public ShippingPage fillFormForShipping() {
         type(firstName, "Tina");
@@ -68,13 +68,16 @@ public class ShippingPage extends BasePage {
         click(continueBtn);
         click(continuePaymentBtn);
         click(placeOrderBtn);
-        click(continueShopping);
-
 //        confirmationOrder.isDisplayed();
 //        String conNum = confirmationOrder.getText().replaceAll("[^\\d.]", "");
 //        orderNumber = Integer.parseInt(conNum);
 //        System.out.println("orderNumber " + orderNumber);
 //        System.out.println("getOrderNumber " + getOrderNumber());
+        return this;
+    }
+
+    public ShippingPage pushContinueShopping() {
+        click(continueShopping);
         return this;
     }
 }

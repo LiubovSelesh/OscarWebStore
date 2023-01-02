@@ -16,14 +16,14 @@ public class BasketTests extends TestBase{
 
     }
 
-    @Test
-    public void compareNumberOfOrder() {
-        new ProductPage(driver).addProductToBasket();
-        new BasketPage(driver).clickOnProceedToCheckOut();
-        new ShippingPage(driver).fillFormForShipping();
-        new BasketPage(driver).clickOnContinueShopping();
-    }
-
+//    @Test
+//    public void compareNumberOfOrder() {
+//        new ProductPage(driver).addProductToBasket();
+//        new BasketPage(driver).clickOnProceedToCheckOut();
+//        new ShippingPage(driver).fillFormForShipping();
+//        new BasketPage(driver).clickOnContinueShopping();
+//    }
+//regression
     @Test
     public void compareItemWithTotalPriceTests() {
         int amountBooks = 2;

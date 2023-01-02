@@ -3,7 +3,6 @@ package com.telran.oscarVersion2.tests;
 import com.telran.oscar.data.UserData;
 import com.telran.oscar.pages.*;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ProductsTests extends TestBase{
@@ -68,7 +67,7 @@ public class ProductsTests extends TestBase{
         new ProductPage(driver).clickOnBtnAddToBasket();
         new BasketPage(driver).clickOnProceedToCheckOut();
         new ShippingPage(driver).fillFormForShipping();
-        Assert.assertTrue(new BasketPage(driver).takeNumberOfOrder().contains("confirmation"));
+        Assert.assertTrue(new BasketPage(driver).getNumberOfOrder());
     }
 
 

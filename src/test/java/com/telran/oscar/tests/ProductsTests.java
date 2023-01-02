@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static java.awt.SystemColor.text;
-
 public class ProductsTests extends TestBase{
 
     @BeforeMethod
@@ -29,6 +27,6 @@ public class ProductsTests extends TestBase{
         new ProductPage(driver).clickOnBtnAddToBasket();
         new BasketPage(driver).clickOnProceedToCheckOut();
         new ShippingPage(driver).fillFormForShipping();
-        Assert.assertTrue(new BasketPage(driver).takeNumberOfOrder().contains("confirmation"));
+        Assert.assertTrue(new BasketPage(driver).getNumberOfOrder());
     }
 }

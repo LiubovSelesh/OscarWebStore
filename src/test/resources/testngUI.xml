@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="UI" verbose="1" >
+    <test name="UI" >
+        <classes>
+            <class name="com.telran.oscarVersion2.tests.HomePageUITests"></class>
+
+        </classes>
+    </test>
+</suite>
