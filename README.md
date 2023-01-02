@@ -1,5 +1,5 @@
 ## Description
-Training site for testing various elements on web pages
+OscarWebStore – online shop
 
 
 ## Testing purposes
