@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.oscarVersion2.tests.HomePageUITests" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-01-02T17:23:34" hostname="DESKTOP-B22BUUO" time="60.995">
+  <properties/>
+  <testcase name="BtnViewBasketPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.179"/>
+  <testcase name="checkLinks" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="20.654"/>
+  <testcase name="elementAddToBasketPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.306"/>
+  <testcase name="elementBookPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.275"/>
+  <testcase name="elementButtonGoPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.648"/>
+  <testcase name="elementDropDownWithLanguagePresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.064"/>
+  <testcase name="elementStarsPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.261"/>
+  <testcase name="listWithProductPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.136"/>
+  <testcase name="logoBasketTotalPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.095"/>
+  <testcase name="logoOscarPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.114"/>
+  <testcase name="logoSandboxPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.095"/>
+  <testcase name="sidePanelPresent" classname="com.telran.oscarVersion2.tests.HomePageUITests" time="0.078"/>
+  <system-out><![CDATA[Button view basket total is present: View basket
+Total links on the WebPage: 57
+url Login or register
+url Oscar
+url 
+url Browse store
+url 
+url 
+url 
+url 
+url Home
+url Clothing
+url Books
+url Fiction
+url Computers in Literature
+url Non-Fiction
+url Essential programming
+url Hacking
+url 
+url The shellcoder's handbook
+url 
+url Hacking Exposed Wireless
+url 
+url Coders at Work
+url 
+url Visual Guide to Lock …
+url 
+url Studyguide for Counter Hack …
+url 
+url Gray Hat Hacking
+url 
+url The Girl Who Played …
+url 
+url Reversing
+url 
+url Cyberpunk
+url 
+url Applied cryptography
+url 
+url The Girl Who Kicked …
+url 
+url Hacker's Delight
+url 
+url Google Hacking
+url 
+url Silence On The Wire
+url 
+url Hacking Work
+url 
+url The Girl with the …
+url 
+url Metasploit
+url 
+url We Are Anonymous
+url 
+url Social Engineering
+url 
+url The Cathedral & the …
+url next
+https://latest.oscarcommerce.com/en-gb/accounts/login/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/ - OK
+https://latest.oscarcommerce.com/en-gb/basket/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/# - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/clothing_1/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books_2/ - OK
+https://latest.oscarcommerce.com/en-gb/offers/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/clothing_1/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books_2/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books/fiction_3/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books/fiction/computers-in-literature_4/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books/non-fiction_5/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books/non-fiction/essential-programming_6/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/category/books/non-fiction/hacking_7/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-shellcoders-handbook_209/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-shellcoders-handbook_209/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hacking-exposed-wireless_208/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hacking-exposed-wireless_208/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/coders-at-work_207/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/coders-at-work_207/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/visual-guide-to-lock-picking_206/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/visual-guide-to-lock-picking_206/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/studyguide-for-counter-hack-reloaded_205/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/studyguide-for-counter-hack-reloaded_205/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/gray-hat-hacking_204/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/gray-hat-hacking_204/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-who-played-with-non-fire_203/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-who-played-with-non-fire_203/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/reversing_202/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/reversing_202/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/cyberpunk_201/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/cyberpunk_201/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/applied-cryptography_200/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/applied-cryptography_200/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-who-kicked-the-hornets-nest_199/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-who-kicked-the-hornets-nest_199/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hackers-delight_198/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hackers-delight_198/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/google-hacking_197/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/google-hacking_197/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/silence-on-the-wire_196/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/silence-on-the-wire_196/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hacking-work_195/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/hacking-work_195/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-with-the-dragon-tattoo_194/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-girl-with-the-dragon-tattoo_194/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/metasploit_193/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/metasploit_193/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/we-are-anonymous_192/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/we-are-anonymous_192/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/social-engineering_191/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/social-engineering_191/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-cathedral-the-bazaar_190/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/the-cathedral-the-bazaar_190/ - OK
+https://latest.oscarcommerce.com/en-gb/catalogue/?page=2 - OK
+is element Present: true
+is element Present: true
+is element Present: true
+is element Present: true
+is element Present: true
+is element Present: true
+Button Go is present: Go
+DropDown British
+is element Present: true
+is element Present: true
+is element Present: true
+List with product is present: true
+Logo Basket total is present Basket total:
+Logo is present Oscar
+Logo is present Sandbox
+Side panel is present: Clothing
+Books
+Fiction
+Computers in Literature
+Non-Fiction
+Essential programming
+Hacking
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 42907
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:23:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 32638
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:23:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 24872
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 25000
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 43678
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 21566
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 32736
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 14542
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 44268
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:23 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 47770
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 37364
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 28651
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 02, 2023 6:24:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
