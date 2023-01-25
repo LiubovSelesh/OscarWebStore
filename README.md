@@ -4,7 +4,8 @@ OscarWebStore – online shop
 
 ## Testing purposes
 [MapMup](https://drive.google.com/drive/u/0/folders/1pPzM9JAmvl_LC7h4RV5ptxIn0TjS0eKj)
-TestPlan –[TesLink](https://testlink.telran-edu.de/index.php?caller=login&viewer=)
+[TestPlan](ttps://docs.google.com/spreadsheets/d/1GUaHDGnAsFCef9aW8JTgas8C2H0aqQ9cuJbIkHAsahI/edit#gid=1064942698)
+[TesLink](https://testlink.telran-edu.de/index.php?caller=login&viewer=)
 [ChekList](https://docs.google.com/spreadsheets/d/1GUaHDGnAsFCef9aW8JTgas8C2H0aqQ9cuJbIkHAsahI/edit#gid=1064942698)
 Used [Boundary Value] Analysis  for registration and login Tests (https://docs.google.com/spreadsheets/d/1IxlSLqSF6JNzr3h7BRjnCgaxK3g10aeXICTbbwZosEM/edit#gid=732347812)
 
