@@ -3,7 +3,7 @@ OscarWebStore – online shop
 
 
 ## Testing purposes
-MapMup - bit.ly/3vxDDr6 [TEXT TO SHOW](https://drive.google.com/drive/u/0/folders/1pPzM9JAmvl_LC7h4RV5ptxIn0TjS0eKj)
+[MapMup](https://drive.google.com/drive/u/0/folders/1pPzM9JAmvl_LC7h4RV5ptxIn0TjS0eKj)
 TestPlan –Testlink - bit.ly/3VGDk7V
 ChekList - bit.ly/3IzPKvx
 Used Boundary Value Analysis  for registration and login Tests - - bit.ly/3Qab2S3
