@@ -7,7 +7,7 @@ OscarWebStore – online shop
 [TestPlan](ttps://docs.google.com/spreadsheets/d/1GUaHDGnAsFCef9aW8JTgas8C2H0aqQ9cuJbIkHAsahI/edit#gid=1064942698)
 [TesLink](https://testlink.telran-edu.de/index.php?caller=login&viewer=)
 [ChekList](https://docs.google.com/spreadsheets/d/1GUaHDGnAsFCef9aW8JTgas8C2H0aqQ9cuJbIkHAsahI/edit#gid=1064942698)
-Used [Boundary Value] Analysis  for registration and login Tests (https://docs.google.com/spreadsheets/d/1IxlSLqSF6JNzr3h7BRjnCgaxK3g10aeXICTbbwZosEM/edit#gid=732347812)
+Used Boundary Value Analysis  for [registration and login](https://docs.google.com/spreadsheets/d/1IxlSLqSF6JNzr3h7BRjnCgaxK3g10aeXICTbbwZosEM/edit#gid=732347812)
 
 Pattern was created with Page Object
 - BlackBox Testing,
