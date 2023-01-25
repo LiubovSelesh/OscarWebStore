@@ -13,10 +13,13 @@ Pattern was created with Page Object
 - BlackBox Testing,
 - Nonfunctional
   • Usability
+  
 - Functional testing
   • Smoke testing
+  
 - Maintenance
   • Regression Testing
+  
 Use boundary value with csv file use DataProvider
 Creating Package for running tests:
   • UI test- testngUI.xml  - gradlew clean testngUI
