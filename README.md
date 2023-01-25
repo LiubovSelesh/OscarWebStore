@@ -6,7 +6,7 @@ Smoke testing was performed to ensure that the critical functionalities of the a
 
 
 ## Testing purposes
-[MapMup](https://drive.google.com/drive/u/0/folders/1pPzM9JAmvl_LC7h4RV5ptxIn0TjS0eKj)
+[MindMup](https://drive.google.com/drive/u/0/folders/1pPzM9JAmvl_LC7h4RV5ptxIn0TjS0eKj)
 
 [TestPlan](ttps://docs.google.com/spreadsheets/d/1GUaHDGnAsFCef9aW8JTgas8C2H0aqQ9cuJbIkHAsahI/edit#gid=1064942698)
 
