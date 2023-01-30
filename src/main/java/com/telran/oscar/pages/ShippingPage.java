@@ -4,6 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 
 public class ShippingPage extends BasePage {
 
@@ -48,19 +52,11 @@ public class ShippingPage extends BasePage {
     @FindBy(id = "place-order")
     WebElement placeOrderBtn;
 
-    @FindBy(css = ".offset-sm-4 .btn ")
-    WebElement continueShopping;
-//
-//    @FindBy(xpath = "//a[contains(text(),'Oscar')]")
-//    WebElement logo;
-//
-//    @FindBy(css = ".page_inner .sub-header h1")
-//    WebElement confirmationOrder ;
 
     public ShippingPage fillFormForShipping() {
         type(firstName, "Tina");
         type(lastName, "Born");
-        type(address,"Schnelstrasse");
+        type(address, "Schnelstrasse");
         type(city, "Berlin");
         type(postcode, "12439");
         click(country);
@@ -68,16 +64,15 @@ public class ShippingPage extends BasePage {
         click(continueBtn);
         click(continuePaymentBtn);
         click(placeOrderBtn);
-//        confirmationOrder.isDisplayed();
-//        String conNum = confirmationOrder.getText().replaceAll("[^\\d.]", "");
-//        orderNumber = Integer.parseInt(conNum);
-//        System.out.println("orderNumber " + orderNumber);
-//        System.out.println("getOrderNumber " + getOrderNumber());
         return this;
     }
+
+    @FindBy(css = ".offset-sm-4 .btn ")
+    WebElement continueShopping;
 
     public ShippingPage pushContinueShopping() {
         click(continueShopping);
         return this;
     }
+
 }

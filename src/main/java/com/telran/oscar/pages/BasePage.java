@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,10 +40,6 @@ public class BasePage {
         element.click();
     }
 
-    public void shouldHaveText(WebElement element, String text, int time) {
-        new WebDriverWait(driver, time).until(ExpectedConditions.textToBePresentInElement(element, text));
-    }
-
     public void pause(int millis) {
         try {
             Thread.sleep(millis);
@@ -70,9 +64,9 @@ public class BasePage {
         return element.size() > 0;
     }
 
-    public void should(WebElement element, int time) {
-        new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
-    }
+//    public void should(WebElement element, int time) {
+//        new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
+//    }
 
     @FindBy(css = ".nav-link.mt-2.mt-lg-0")
     WebElement logoAccount;

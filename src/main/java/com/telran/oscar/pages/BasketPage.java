@@ -71,7 +71,7 @@ public class BasketPage extends ShippingPage {
         ordersNum.isDisplayed();
         String conOrder = ordersNum.getText().replaceAll("[^\\d.]", "");
         numOfOrder = Integer.parseInt(conOrder);
-//        System.out.println("numOfOrder " + numOfOrder);
+
 
         compareOrdersNumber();
         return this;
