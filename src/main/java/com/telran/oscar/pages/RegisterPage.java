@@ -82,7 +82,7 @@ public class RegisterPage extends BasePage {
     @FindBy(xpath = "//strong[contains(text(),'Oops! We found some errors')]")
     WebElement errorBlock;
 
-    public String getMessagemResult() {
+    public String getMessageResult() {
         return errorBlock.getText();
 
     }

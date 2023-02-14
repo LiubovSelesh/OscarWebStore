@@ -47,7 +47,7 @@ public class RegisterTests extends TestBase{
         int i = (int) ((System.currentTimeMillis()) / 1000) % 3600;
         String email = "kara" + i + "@gmail.com";
         new RegisterPage(driver).fillRegisterFormInvalidPassword(email, password, confirm);
-        Assert.assertTrue(new RegisterPage(driver).getMessagemResult().contains("Oops! We found some errors"));
+        Assert.assertTrue(new RegisterPage(driver).getMessageResult().contains("Oops! We found some errors"));
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "registrationWithInvalidConfirm")
@@ -55,7 +55,7 @@ public class RegisterTests extends TestBase{
         int i = (int) ((System.currentTimeMillis()) / 1000) % 3600;
         String email = "kara" + i + "@gmail.com";
         new RegisterPage(driver).fillRegisterFormInvalidPassword(email, password, confirm);
-        Assert.assertTrue(new RegisterPage(driver).getMessagemResult().contains("Oops! We found some errors"));
+        Assert.assertTrue(new RegisterPage(driver).getMessageResult().contains("Oops! We found some errors"));
     }
 
   }

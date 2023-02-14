@@ -67,7 +67,7 @@ public class ShippingPage extends BasePage {
         return this;
     }
 
-    @FindBy(css = ".offset-sm-4 .btn ")
+    @FindBy(css = ".offset-sm-4 .btn")
     WebElement continueShopping;
 
     public ShippingPage pushContinueShopping() {

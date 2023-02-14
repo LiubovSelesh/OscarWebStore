@@ -27,7 +27,6 @@ public class HomePageUITests extends TestBase {
         Assert.assertTrue(new HomePage(driver).isLogoSandboxDisplayed());
     }
 
-
     @Test
     public void logoBasketTotalPresent() {
         Assert.assertTrue(new HomePage(driver).isLogoBasketTotalDisplayed());
@@ -47,7 +46,6 @@ public class HomePageUITests extends TestBase {
     public void listWithProductPresent() {
         Assert.assertTrue(new HomePage(driver).isListWithProductDisplayed());
     }
-
 
     @Test
     public void elementBookPresent() {

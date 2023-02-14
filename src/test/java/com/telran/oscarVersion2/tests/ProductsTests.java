@@ -38,6 +38,7 @@ public class ProductsTests extends TestBase{
         new ProductPage(driver).addBookToBasket();
         new BasketPage(driver).checkoutBasket();
         new ShippingPage(driver).fillFormForShipping();
+        new ShippingPage(driver).pushContinueShopping();
         new RegisterPage(driver).clickOnAccount();
         new ProfilePage(driver).clickOnDeleteProfile();
         new ProfilePage(driver).fillTheFieldPassword();
